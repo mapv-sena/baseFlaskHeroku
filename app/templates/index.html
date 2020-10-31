@@ -4,14 +4,30 @@
     <title>Hoja de Vida Miguel Pérez</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        x= 10; //Left
+        y= 10; //Top
+        function Mover(direccion)
+        {
+            switch (direccion.KeyCode)
+            {
+                //Arriba
+                case 38:
+                    y-= 5;
+                    document.getElementById("imagen").style.top= String(y) + "px";
+                break;
+            }
+        }
+    </script>
 </head>
-<body>
+<body onkeyup="Mover(event);">
     <center><h1>Miguel Angel Pérez Villamizar</h1></center>
     <p align="center">
         Dirección Residencia: Av. 10E # 3N - 81 Barrio Govika<br>
         Teléfono: 3003454836<br>
         E-Mail: maperezvi@misena.edu.co
     </p>
+    <img src="sena.png" id="imagen" style="position: relative;" alt=""/>
     <hr color="blue">
     
     <h2>Perfil</h2>
